@@ -1,0 +1,9 @@
+import * as validators from "./auth.validation";
+import { z } from "zod";
+
+export type ISignupBodyInputsDTO = z.infer<typeof validators.signup.body>;
+export type ILoginBodyInputsDTO = z.infer<typeof validators.login.body>;
+export type IConfirmEmailBodyInputsDTO = z.infer<typeof validators.confirmEmail.body>;
+export type IForgotPasswordBodyInputsDTO = z.infer<typeof validators.sendForgotPassword.body>;
+export type IVerifyForgotPasswordBodyInputsDTO = z.infer<typeof validators.verifyForgotPassword.body>;
+export type IResetForgotPasswordBodyInputsDTO = z.infer<typeof validators.resetForgotPassword.body>;
